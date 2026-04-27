@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Innovation Agenda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .pdf-viewer {
+            flex: 1;
+            position: relative;
+            min-height: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe {
+            width: 100%;
+            flex: 1;
+            border: none;
+            min-height: 700px;
+        }
+
+        .fallback {
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .fallback a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+
+        .fallback a:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .pdf-viewer {
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                border-radius: 8px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .pdf-viewer {
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Climate Innovation Agenda</h1>
+            <p>View the full document below</p>
+        </div>
+        <div class="pdf-viewer">
+            <iframe src="Climate_Innovation_Agenda.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+                    title="Climate Innovation Agenda PDF">
+            </iframe>
+            <div class="fallback">
+                <p>If the PDF viewer is not working on your device, you can download it directly:</p>
+                <a href="Climate_Innovation_Agenda.pdf" download>Download PDF</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
